@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio — Miguel Paula
 
-## Getting Started
+Site pessoal em Next.js 16 (App Router), PT-BR em `/` e EN em `/en`. Página 100% estática.
 
-First, run the development server:
+## Rodar
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # build de produção
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editar conteúdo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Todo texto e link mora em `src/content/site.ts`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `links` — e-mail e links dos mods (CurseForge/Modrinth). Link `null` mostra "link em breve".
+- `pt` / `en` — os textos das duas línguas, lado a lado.
 
-## Learn More
+Imagens ficam em `public/img/` (webp, até 1920 px).
 
-To learn more about Next.js, take a look at the following resources:
+## Publicar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+O site está no ar em **https://miguel-aw.github.io**. Todo `git push` na `main` publica sozinho
+(GitHub Actions, `.github/workflows/deploy.yml`): lint, build estático (`STATIC_EXPORT=1`) e deploy.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Ver o deploy: aba **Actions** do repositório.
+- Domínio próprio: Settings → Pages → Custom domain, e trocar `NEXT_PUBLIC_SITE_URL` no workflow.
+- Alternativa: importar o repositório na Vercel funciona sem configuração.
 
-## Deploy on Vercel
+## Layouts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`/` é o **Multipista**. Alternativas (fora da busca do Google): `/layouts/programacao`, `/layouts/artes`,
+`/layouts/maximalismo`, com vitrine em `/layouts`. Componentes em `src/components/layouts/`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Estrutura
+
+- `src/app/(pt)` e `src/app/(en)/en` — um layout raiz por idioma (`<html lang>` certo em cada um).
+- `src/components/Portfolio.tsx` — a página inteira.
+- `src/app/globals.css` — identidade visual (tokens no topo).
