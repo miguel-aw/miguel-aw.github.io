@@ -5,6 +5,12 @@ const OPTIONS = [
   { href: "/layouts/programacao", label: "Programação" },
   { href: "/layouts/artes", label: "Artes" },
   { href: "/layouts/maximalismo", label: "Maximalismo" },
+  { href: "/layouts/minecraft", label: "Minecraft" },
+  { href: "/layouts/desktop", label: "MiguelOS" },
+  { href: "/layouts/vhs", label: "VHS" },
+  { href: "/layouts/piano", label: "Piano" },
+  { href: "/layouts/editorial", label: "Revista" },
+  { href: "/layouts/blueprint", label: "Blueprint" },
 ];
 
 // Barra flutuante para comparar os layouts enquanto o Miguel escolhe.
