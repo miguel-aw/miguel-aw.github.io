@@ -65,6 +65,12 @@ const LAYOUTS = [
     desc: "Planta técnica azul com cotas, carimbo, anotações à mão e os projetos como peças.",
     cls: "pk--bp",
   },
+  {
+    href: "/layouts/brutalista",
+    name: "Brutalista",
+    desc: "Preto e branco cru, tipografia enorme e grade aparente. As fotos ganham cor quando o mouse passa.",
+    cls: "pk--br",
+  },
 ];
 
 export default function Page() {

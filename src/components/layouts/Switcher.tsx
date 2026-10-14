@@ -11,6 +11,7 @@ const OPTIONS = [
   { href: "/layouts/piano", label: "Piano" },
   { href: "/layouts/editorial", label: "Revista" },
   { href: "/layouts/blueprint", label: "Blueprint" },
+  { href: "/layouts/brutalista", label: "Brutalista" },
 ];
 
 // Barra flutuante para comparar os layouts enquanto o Miguel escolhe.
